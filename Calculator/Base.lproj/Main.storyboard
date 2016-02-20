@@ -255,6 +255,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fd-7B-cjO">
+                                <rect key="frame" x="103" y="537" width="169" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="RkU-O8-TYC"/>
+                                    <constraint firstAttribute="height" constant="62" id="jzT-Uy-5Wr"/>
+                                </constraints>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kEh-Y9-qQt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -269,9 +280,11 @@
                             <constraint firstItem="hqb-Aw-1de" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aXI-kC-IKd"/>
                             <constraint firstItem="BNm-wG-U8t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cuv-hx-otG"/>
                             <constraint firstItem="hqb-Aw-1de" firstAttribute="trailing" secondItem="sCL-Uj-hxK" secondAttribute="trailing" constant="155" id="dR0-F2-vmf"/>
+                            <constraint firstItem="BNm-wG-U8t" firstAttribute="top" secondItem="7Fd-7B-cjO" secondAttribute="bottom" constant="8" id="fWx-EW-AOk"/>
                             <constraint firstItem="hqb-Aw-1de" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ggj-xP-ymO"/>
                             <constraint firstItem="Kdz-Lf-fpL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lJU-Oq-XOR"/>
                             <constraint firstItem="aGc-Hp-xvf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m8G-eM-qEn"/>
+                            <constraint firstItem="7Fd-7B-cjO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mnC-bO-0oI"/>
                             <constraint firstAttribute="trailing" secondItem="BNm-wG-U8t" secondAttribute="trailing" id="nbG-7M-Q2D"/>
                             <constraint firstItem="hqb-Aw-1de" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pIy-7A-cNw"/>
                             <constraint firstItem="hqb-Aw-1de" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pWv-Z2-06A"/>
@@ -302,6 +315,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>

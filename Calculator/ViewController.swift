@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         case Subtract = "-"
         case Add = "+"
         case Empty = "Empty"
+        case Clear = "Clear"
     }
     
     @IBOutlet weak var outputLbl: UILabel!
@@ -70,14 +71,31 @@ class ViewController: UIViewController {
     @IBAction func onEqualPressed(sender: AnyObject) {
         processOperation(currentOperation)
     }
-    
+    @IBAction func onClearPressed(sender: AnyObject) {
+        processOperation(Operation.Clear)
+    }
 
-    func processOperation (op: Operation) {
+    func processOperation (op: Operation)
+    {
         playSound()
         
-        if currentOperation != Operation.Empty
+        if op == Operation.Clear
         {
-            if runningNumber != "" {
+            
+            runningNumber = ""
+            leftValStr = ""
+            rightValStr = ""
+            result = ""
+            outputLbl.text = "0"
+            currentOperation = Operation.Empty
+            
+        }
+        else if currentOperation != Operation.Empty
+        {
+            
+            if runningNumber != ""
+            {
+                
             rightValStr = runningNumber
             runningNumber = ""
             
@@ -101,13 +119,15 @@ class ViewController: UIViewController {
             }
             currentOperation = op
             
-        } else {
+        }
+        else
+        {
+            if runningNumber != ""{
             leftValStr = runningNumber
             runningNumber = ""
             currentOperation = op
-            
+            }
         }
-        
         
     }
     
